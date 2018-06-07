@@ -11,7 +11,6 @@ RUN apk add --no-cache nodejs \
  && rm -rf node_modules \
  && apk del nodejs
 
-ENV LIBRARY_PATH=LIBRARY_PATH:/lib:/usr/lib
 RUN apk add --no-cache --virtual build-dep gcc linux-headers libc-dev \
  && apk add --no-cache jpeg-dev zlib-dev \
  && pip install -r /app/requirements.txt \
